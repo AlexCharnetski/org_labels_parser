@@ -22,6 +22,6 @@ public class App {
 
     public static void main(String[] args) throws Exception {
         ProcessLabelService processLabelService = new ProcessLabelServiceImpl();
-        processLabelService.deleteLabelsFromOrgLabelsXmlFile();
+        processLabelService.deleteNeverUsedLabelsFromOrgLabelsXmlFile();
     }
 }
