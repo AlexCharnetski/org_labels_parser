@@ -20,7 +20,7 @@ import static org.example.App.*;
 
 public class ProcessLabelServiceImpl implements ProcessLabelService {
     @Override
-    public void deleteLabelsFromCustomLabelsXmlFile() {
+    public void deleteLabelsFromOrgLabelsXmlFile() {
         Scanner scanner = new Scanner(new InputStreamReader(System.in));
         System.out.println("Please enter the full path and name of the XML file with labels from Org:");
         String xmlFileNameWithLabelsFromOrg = scanner.nextLine();
