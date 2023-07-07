@@ -1,9 +1,8 @@
 package org.example;
 
-/**
- * Hello world!
- *
- */
+import org.example.service.label.ProcessLabelService;
+import org.example.service.label.impl.ProcessLabelServiceImpl;
+
 public class App {
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_GREEN = "\u001B[32m";
@@ -20,8 +19,9 @@ public class App {
     public static final String ANSI_PURPLE_BACKGROUND = "\u001B[45m";
     public static final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
     public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+
+    public static void main(String[] args) throws Exception {
+        ProcessLabelService processLabelService = new ProcessLabelServiceImpl();
+        processLabelService.deleteLabelsFromCustomLabelsXmlFile();
     }
 }
